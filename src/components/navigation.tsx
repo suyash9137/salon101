@@ -138,7 +138,7 @@ export default function Navigation() {
 
             <motion.div custom={6} variants={linkVariants} className="mt-auto pb-12">
               <div className="font-body text-body text-muted-taupe mb-2">Herengracht 456, Amsterdam</div>
-              <a href="tel:+15551234567" className="font-body text-body text-ivory block mb-1">+1 (555) 123-4567</a>
+              <a href="tel:+919137499107" className="font-body text-body text-ivory block mb-1">+91 91374 99107</a>
               <a href="mailto:hello@luma-atelier.com" className="font-body text-body text-ivory block">hello@luma-atelier.com</a>
             </motion.div>
           </motion.div>

@@ -42,7 +42,7 @@ export default function Footer() {
         <motion.div variants={fadeUp} className="md:col-span-2 flex flex-col gap-6">
           <h4 className="font-body text-caption uppercase tracking-widest text-deep-espresso mb-2">Connect</h4>
           <p className="font-body text-body text-text-secondary leading-relaxed">
-            hello@luma-atelier.com<br />+31 20 123 4567
+            hello@luma-atelier.com<br />+91 91374 99107
           </p>
           <WhatsAppButton className="w-full mt-4" />
           <div className="flex gap-4 mt-2">

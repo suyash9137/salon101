@@ -103,7 +103,7 @@ export default function WhatsAppForm({
             value={formData.phone}
             onChange={handleChange}
             className={`block w-full rounded-border border-muted-taupe/20 px-4 py-3 text-body focus:border-ivory focus:ring-2 focus:ring-ivory/20 bg-warm-cream/50 ${errors.phone ? 'border-red-500' : ''}`}
-            placeholder="+31 6 12345678"
+            placeholder="+91 91374 99107"
             required
           />
           {errors.phone && (
