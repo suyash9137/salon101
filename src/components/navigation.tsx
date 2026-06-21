@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useState, useEffect } from 'react';
 import { usePathname } from 'next/navigation';
+import WhatsAppButton from '@/components/whatsapp-button';
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
@@ -86,15 +87,18 @@ export default function Navigation() {
                 className="w-full h-[1.5px] bg-current block transition-transform"
               />
             </button>
-            <Link href="/contact" passHref>
-              <motion.button 
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="font-body text-caption uppercase tracking-widest px-6 py-3 rounded-button bg-transparent border border-ivory/30 text-ivory hover:bg-ivory hover:text-deep-espresso transition-colors duration-300 hidden md:block"
-              >
-                Book Now
-              </motion.button>
-            </Link>
+            <div className="flex gap-3 hidden md:block">
+              <Link href="/contact" passHref>
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="font-body text-caption uppercase tracking-widest px-6 py-3 rounded-button bg-transparent border border-ivory/30 text-ivory hover:bg-ivory hover:text-deep-espresso transition-colors duration-300"
+                >
+                  Book Now
+                </motion.button>
+              </Link>
+              <WhatsAppButton />
+            </div>
           </div>
         </div>
       </motion.header>
@@ -136,8 +140,12 @@ export default function Navigation() {
                 </Link>
               </motion.div>
             </div>
-            
-            <motion.div custom={5} variants={linkVariants} className="mt-auto pb-12">
+
+            <motion.div custom={5} variants={linkVariants}>
+              <WhatsAppButton className="w-full mt-4" />
+            </motion.div>
+
+            <motion.div custom={6} variants={linkVariants} className="mt-auto pb-12">
               <div className="font-body text-body text-muted-taupe mb-2">Herengracht 456, Amsterdam</div>
               <a href="tel:+15551234567" className="font-body text-body text-ivory block mb-1">+1 (555) 123-4567</a>
               <a href="mailto:hello@luma-atelier.com" className="font-body text-body text-ivory block">hello@luma-atelier.com</a>

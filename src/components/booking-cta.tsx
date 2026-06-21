@@ -4,6 +4,7 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 import { fadeUp, slowReveal } from '@/lib/motion';
 import { useRef } from 'react';
 import Link from 'next/link';
+import WhatsAppButton from '@/components/whatsapp-button';
 
 export default function BookingCTA() {
   const containerRef = useRef(null);
@@ -39,7 +40,7 @@ export default function BookingCTA() {
           Step away from the rush and allow us to cultivate your natural aura. Appointments are strictly limited to ensure an uncompromised experience.
         </motion.p>
         <Link href="/contact" passHref>
-          <motion.button 
+          <motion.button
             variants={fadeUp}
             whileHover={{ scale: 1.05, boxShadow: "0 0 20px rgba(197, 189, 182, 0.3)" }}
             whileTap={{ scale: 0.95 }}
@@ -48,6 +49,7 @@ export default function BookingCTA() {
             RESERVE YOUR EXPERIENCE
           </motion.button>
         </Link>
+        <WhatsAppButton className="mt-6" />
       </motion.div>
     </motion.section>
   );

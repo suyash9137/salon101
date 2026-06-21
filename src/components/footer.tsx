@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { fadeUp, staggerContainer } from '@/lib/motion';
+import WhatsAppButton from '@/components/whatsapp-button';
 
 export default function Footer() {
   return (
@@ -43,6 +44,7 @@ export default function Footer() {
           <p className="font-body text-body text-text-secondary leading-relaxed">
             hello@luma-atelier.com<br />+31 20 123 4567
           </p>
+          <WhatsAppButton className="w-full mt-4" />
           <div className="flex gap-4 mt-2">
             <a className="text-text-secondary hover:text-deep-espresso transition-colors" href="#" aria-label="Instagram">
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>

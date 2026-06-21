@@ -3,6 +3,7 @@
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { fadeUp, staggerContainer, slowReveal } from '@/lib/motion';
+import WhatsAppButton from '@/components/whatsapp-button';
 
 export default function ContactPage() {
   const formInputClasses = "w-full border-0 border-b border-muted-taupe/30 bg-transparent rounded-none py-4 focus:ring-0 focus:outline-none focus:border-b-2 focus:border-deep-espresso transition-colors duration-300 font-body text-body text-deep-espresso placeholder:text-muted-taupe";
@@ -42,6 +43,7 @@ export default function ContactPage() {
                 </div>
               </div>
             </div>
+            <WhatsAppButton className="w-full mt-6" />
             <div>
               <h3 className="font-body text-caption text-deep-espresso tracking-widest uppercase mb-6">Hours of Tranquility</h3>
               <ul className="space-y-4 font-body text-body text-text-secondary">
