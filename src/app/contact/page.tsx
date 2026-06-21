@@ -3,7 +3,7 @@
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { fadeUp, staggerContainer, slowReveal } from '@/lib/motion';
-import WhatsAppButton from '@/components/whatsapp-button';
+import WhatsAppForm from '@/components/whatsapp-form';
 
 export default function ContactPage() {
   const formInputClasses = "w-full border-0 border-b border-muted-taupe/30 bg-transparent rounded-none py-4 focus:ring-0 focus:outline-none focus:border-b-2 focus:border-deep-espresso transition-colors duration-300 font-body text-body text-deep-espresso placeholder:text-muted-taupe";
@@ -43,7 +43,7 @@ export default function ContactPage() {
                 </div>
               </div>
             </div>
-            <WhatsAppButton className="w-full mt-6" />
+
             <div>
               <h3 className="font-body text-caption text-deep-espresso tracking-widest uppercase mb-6">Hours of Tranquility</h3>
               <ul className="space-y-4 font-body text-body text-text-secondary">
@@ -63,30 +63,9 @@ export default function ContactPage() {
             </div>
           </motion.div>
           
-          <motion.form variants={fadeUp} className="space-y-8 bg-ivory p-10 rounded-card shadow-soft">
-            <h3 className="font-heading text-3xl text-deep-espresso mb-8">Send a Message</h3>
-            <div className="space-y-6">
-              <div>
-                <label className="sr-only" htmlFor="name">Full Name</label>
-                <input className={formInputClasses} id="name" placeholder="Full Name" type="text" />
-              </div>
-              <div>
-                <label className="sr-only" htmlFor="email">Email Address</label>
-                <input className={formInputClasses} id="email" placeholder="Email Address" type="email" />
-              </div>
-              <div>
-                <label className="sr-only" htmlFor="service">Subject / Service of Interest</label>
-                <input className={formInputClasses} id="service" placeholder="Service of Interest (Optional)" type="text" />
-              </div>
-              <div>
-                <label className="sr-only" htmlFor="message">Message</label>
-                <textarea className={`${formInputClasses} resize-none`} id="message" placeholder="Your Message" rows={4}></textarea>
-              </div>
-            </div>
-            <button className="w-full bg-deep-espresso text-ivory font-body text-label-md tracking-widest uppercase py-5 rounded-button hover:bg-opacity-90 transition-all duration-300 mt-10" type="button">
-              Send Message
-            </button>
-          </motion.form>
+          <motion.div variants={fadeUp} className="bg-ivory p-10 rounded-card shadow-soft">
+            <WhatsAppForm title="Book an Appointment" buttonText="Send WhatsApp Message" />
+          </motion.div>
         </motion.div>
 
         {/* Map & Directions */}

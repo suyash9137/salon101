@@ -88,15 +88,6 @@ export default function Navigation() {
               />
             </button>
             <div className="flex gap-3 hidden md:block">
-              <Link href="/contact" passHref>
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="font-body text-caption uppercase tracking-widest px-6 py-3 rounded-button bg-transparent border border-ivory/30 text-ivory hover:bg-ivory hover:text-deep-espresso transition-colors duration-300"
-                >
-                  Book Now
-                </motion.button>
-              </Link>
               <WhatsAppButton />
             </div>
           </div>
