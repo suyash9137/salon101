@@ -16,17 +16,19 @@ export function generateWhatsAppLink(
   date: string,
   notes: string = ''
 ): string {
+  const notesText = notes.trim() ? `\n\n*Additional Notes:*\n📝 ${notes.trim()}` : '';
+
   // Build the message template
   const message = WHATSAPP_DEFAULT_MESSAGE
-    .replace('[NAME]', encodeURIComponent(name.trim()))
-    .replace('[PHONE]', encodeURIComponent(phone.trim()))
-    .replace('[SERVICE]', encodeURIComponent(service.trim()))
-    .replace('[DATE]', encodeURIComponent(date.trim()))
-    .replace('[NOTES]', encodeURIComponent(notes.trim()));
+    .replace('[NAME]', name.trim())
+    .replace('[PHONE]', phone.trim())
+    .replace('[SERVICE]', service.trim())
+    .replace('[DATE]', date.trim())
+    .replace('[NOTES_SECTION]', notesText);
 
-  // Remove leading/trailing whitespace from message
-  const cleanedMessage = message.trim();
+  // Encode the entire message for the URL
+  const encodedMessage = encodeURIComponent(message.trim());
 
   // Construct WhatsApp URL
-  return `https://wa.me/${WHATSAPP_NUMBER.replace(/\+/g, '')}?text=${cleanedMessage}`;
+  return `https://wa.me/${WHATSAPP_NUMBER.replace(/\+/g, '')}?text=${encodedMessage}`;
 }

@@ -1,11 +1,15 @@
 export const WHATSAPP_NUMBER = '+919137499107'; // Replace with actual salon number
 
-export const WHATSAPP_DEFAULT_MESSAGE = `Hi, I'd like to book an appointment.
+export const WHATSAPP_DEFAULT_MESSAGE = `*New Booking Request!* 📅✨
 
-Name: [NAME]
-Phone: [PHONE]
-Service: [SERVICE]
-Preferred Date: [DATE]
-Notes: [NOTES]
+Hi LUMA Atelier, I'd like to book an appointment.
 
-Please let me know available slots.`;
+*Client Details:*
+👤 *Name:* [NAME]
+📱 *Phone:* [PHONE]
+
+*Appointment Details:*
+💇‍♀️ *Service:* [SERVICE]
+🗓️ *Date:* [DATE][NOTES_SECTION]
+
+Please let me know your available slots!`;
